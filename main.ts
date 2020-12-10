@@ -538,12 +538,10 @@ game.onUpdateInterval(1500, function () {
     }
 })
 forever(function () {
-    if (ground2.x < -1 * (scene.screenWidth() / 2)) {
-        ground2.x = ground1.x + scene.screenWidth()
-    }
-})
-forever(function () {
     if (ground1.x < -1 * (scene.screenWidth() / 2)) {
         ground1.x = ground2.x + scene.screenWidth()
+    }
+    if (ground2.x < -1 * (scene.screenWidth() / 2)) {
+        ground2.x = ground1.x + scene.screenWidth()
     }
 })
